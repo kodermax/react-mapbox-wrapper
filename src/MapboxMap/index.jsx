@@ -58,7 +58,7 @@ export default class MapboxMap extends Component {
      * React lifecycle.
      * @param {Object} nextProps Next props
      */
-    componentWillReceiveProps({ coordinates, zoom, minZoom, maxZoom, style }) {
+    componentDidUpdate({ coordinates, zoom, minZoom, maxZoom, mapStyle }) {
         if (!this.map) {
             return;
         }
@@ -68,7 +68,7 @@ export default class MapboxMap extends Component {
             zoom: currentZoom,
             minZoom: currentMinZoom,
             maxZoom: currentMaxZoom,
-            style: currentStyle,
+            mapStyle: currentStyle,
         } = this.props;
         if (!coordinatesAreEqual(currentCenter, coordinates)) {
             this.map.setCenter([coordinates.lng, coordinates.lat]);
@@ -86,8 +86,8 @@ export default class MapboxMap extends Component {
             this.map.setMaxZoom(maxZoom);
         }
 
-        if (currentStyle !== style) {
-            this.map.setStyle(style);
+        if (currentStyle !== mapStyle) {
+            this.map.setStyle(mapStyle);
         }
     }
 
@@ -146,11 +146,12 @@ export default class MapboxMap extends Component {
             return;
         }
 
-        const { coordinates, onLoad, ...mapOptions } = this.props;
+        const { coordinates, mapStyle: style, onLoad, ...mapOptions } = this.props;
 
         this.map = new mapboxgl.Map({
             ...mapOptions,
             container,
+            style,
             center: new mapboxgl.LngLat(coordinates.lng, coordinates.lat),
         });
 
@@ -243,7 +244,7 @@ MapboxMap.propTypes = {
     onZoomEnd: PropTypes.func,
     onZoomStart: PropTypes.func,
     renderNotSupported: PropTypes.func,
-    style: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
+    mapStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.shape({})]),
     withCompass: PropTypes.bool,
     withFullscreen: PropTypes.bool,
     withZoom: PropTypes.bool,
@@ -261,7 +262,7 @@ MapboxMap.defaultProps = {
     onLoad: undefined,
     onZoomEnd: undefined,
     onZoomStart: undefined,
-    style: DEFAULT_STYLE,
+    mapStyle: DEFAULT_STYLE,
     withCompass: false,
     withFullscreen: false,
     withZoom: false,
