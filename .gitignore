@@ -2,3 +2,4 @@ node_modules/
 esdoc/
 coverage/
 .nyc_output/
+.idea

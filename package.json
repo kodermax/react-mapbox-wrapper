@@ -1,6 +1,6 @@
 {
-  "name": "react-mapbox-wrapper",
-  "version": "1.1.0",
+  "name": "react-mapbox-gl-wrapper",
+  "version": "1.2.2",
   "description": "Mapbox GL Javascript wrapper for ReactJS",
   "repository": {
     "type": "git",

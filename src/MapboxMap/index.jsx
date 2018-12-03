@@ -70,7 +70,6 @@ export default class MapboxMap extends Component {
             maxZoom: currentMaxZoom,
             style: currentStyle,
         } = this.props;
-
         if (!coordinatesAreEqual(currentCenter, coordinates)) {
             this.map.setCenter([coordinates.lng, coordinates.lat]);
         }

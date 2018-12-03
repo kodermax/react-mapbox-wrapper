@@ -15,7 +15,7 @@ import './App.css';
  * @type {String}
  */
 global.ACCESS_TOKEN =
-  'pk.eyJ1IjoibHVjYXN3b2oiLCJhIjoiY2l5Nmg4cWU1MDA0ejMzcDJtNHJmZzJkcyJ9.WhcEdTYQH6sSw2pm0RSP9Q';
+    'pk.eyJ1IjoibHVjYXN3b2oiLCJhIjoiY2l5Nmg4cWU1MDA0ejMzcDJtNHJmZzJkcyJ9.WhcEdTYQH6sSw2pm0RSP9Q';
 
 registerLanguage('jsx', jsx);
 
@@ -26,46 +26,46 @@ registerLanguage('jsx', jsx);
 global.DEFAULT_COORDINATES = { lat: 48.872198, lng: 2.3366308 };
 
 export default function App() {
-  return (
-    <div>
-      <header className="header">
-        <h1>react-mapbox-wrapper</h1>
-        <a
-          href="https://github.com/MeilleursAgents/react-mapbox-wrapper"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <img
-            style={{ position: 'absolute', top: 0, right: 0, border: 0 }}
-            src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
-            alt="Fork me on GitHub"
-          />
-        </a>
-      </header>
+    return (
+        <div>
+            <header className="header">
+                <h1>react-mapbox-wrapper</h1>
+                <a
+                    href="https://github.com/MeilleursAgents/react-mapbox-wrapper"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    <img
+                        style={{ position: 'absolute', top: 0, right: 0, border: 0 }}
+                        src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+                        alt="Fork me on GitHub"
+                    />
+                </a>
+            </header>
 
-      <a
-        className="link"
-        href="https://github.com/MeilleursAgents/react-mapbox-wrapper#usage"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        Documentation
-      </a>
-      <a
-        className="link margin-left"
-        href="https://github.com/MeilleursAgents/react-mapbox-wrapper/tree/master/examples/src"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        Examples sources
-      </a>
+            <a
+                className="link"
+                href="https://github.com/MeilleursAgents/react-mapbox-wrapper#usage"
+                target="_blank"
+                rel="noreferrer noopener"
+            >
+                Documentation
+            </a>
+            <a
+                className="link margin-left"
+                href="https://github.com/MeilleursAgents/react-mapbox-wrapper/tree/master/examples/src"
+                target="_blank"
+                rel="noreferrer noopener"
+            >
+                Examples sources
+            </a>
 
-      <div className="content">
-        <h2>SimpleMap with fixed size</h2>
-        <div className="example">
-          <SimpleMap  className="map-container" />
-          <SyntaxHighlighter className="code" language="jsx" style={prism}>
-            {`import React from 'react';
+            <div className="content">
+                <h2>SimpleMap with fixed size</h2>
+                <div className="example">
+                    <SimpleMap className="map-container"/>
+                    <SyntaxHighlighter className="code" language="jsx" style={prism}>
+                        {`import React from 'react';
 import MapboxMap from 'react-mapbox-wrapper';
 
 export default function SimpleMap() {
@@ -80,16 +80,16 @@ export default function SimpleMap() {
 }
 
 SimpleMap.displayName = 'SimpleMap';`}
-          </SyntaxHighlighter>
-        </div>
-      </div>
+                    </SyntaxHighlighter>
+                </div>
+            </div>
 
-      <div className="content">
-        <h2>Marker</h2>
-        <div className="example">
-          <MapWithMarker />
-          <SyntaxHighlighter className="code" language="jsx" style={prism}>
-            {`import React, { Component } from 'react';
+            <div className="content">
+                <h2>Marker</h2>
+                <div className="example">
+                    <MapWithMarker/>
+                    <SyntaxHighlighter className="code" language="jsx" style={prism}>
+                        {`import React, { Component } from 'react';
 import MapboxMap, { Marker } from 'react-mapbox-wrapper';
 
 export default class MapWithMarker extends Component {
@@ -124,16 +124,16 @@ export default class MapWithMarker extends Component {
 }
 
 MapWithMarker.displayName = 'MapWithMarker';`}
-          </SyntaxHighlighter>
-        </div>
-      </div>
+                    </SyntaxHighlighter>
+                </div>
+            </div>
 
-      <div className="content">
-        <h2>Marker with Popup on Click</h2>
-        <div className="example">
-          <MarkerWithPopup />
-          <SyntaxHighlighter className="code" language="jsx" style={prism}>
-            {`import React, { Component } from 'react';
+            <div className="content">
+                <h2>Marker with Popup on Click</h2>
+                <div className="example">
+                    <MarkerWithPopup/>
+                    <SyntaxHighlighter className="code" language="jsx" style={prism}>
+                        {`import React, { Component } from 'react';
 import MapboxMap, { Marker } from 'react-mapbox-wrapper';
 
 export default class MarkerWithPopup extends Component {
@@ -177,16 +177,16 @@ export default class MarkerWithPopup extends Component {
 }
 
 MarkerWithPopup.displayName = 'MarkerWithPopup';`}
-          </SyntaxHighlighter>
-        </div>
-      </div>
+                    </SyntaxHighlighter>
+                </div>
+            </div>
 
-      <div className="content">
-        <h2>Custom Marker with Popup on Over</h2>
-        <div className="example">
-          <CustomMarkerOnOver />
-          <SyntaxHighlighter className="code" language="jsx" style={prism}>
-            {`import React, { Component } from 'react';
+            <div className="content">
+                <h2>Custom Marker with Popup on Over</h2>
+                <div className="example">
+                    <CustomMarkerOnOver/>
+                    <SyntaxHighlighter className="code" language="jsx" style={prism}>
+                        {`import React, { Component } from 'react';
 import MapboxMap, { Marker } from 'react-mapbox-wrapper';
 
 export default class CustomMarker extends Component {
@@ -235,16 +235,16 @@ export default class CustomMarker extends Component {
 }
 
 CustomMarker.displayName = 'CustomMarker';`}
-          </SyntaxHighlighter>
-        </div>
-      </div>
+                    </SyntaxHighlighter>
+                </div>
+            </div>
 
-      <div className="content">
-        <h2>Circle</h2>
-        <div className="example">
-          <MapWithCircle />
-          <SyntaxHighlighter className="code" language="jsx" style={prism}>
-            {`import React, { Component } from 'react';
+            <div className="content">
+                <h2>Circle</h2>
+                <div className="example">
+                    <MapWithCircle/>
+                    <SyntaxHighlighter className="code" language="jsx" style={prism}>
+                        {`import React, { Component } from 'react';
 import MapboxMap, { Circle } from 'react-mapbox-wrapper';
 
 export default class MapWithCircle extends Component {
@@ -291,16 +291,16 @@ export default class MapWithCircle extends Component {
 }
 
 MapWithCircle.displayName = 'MapWithCircle';`}
-          </SyntaxHighlighter>
-        </div>
-      </div>
+                    </SyntaxHighlighter>
+                </div>
+            </div>
 
-      <div className="content">
-        <h2>Radius, Marker, Popup and fitBounds</h2>
-        <div className="example">
-          <AllInOne />
-          <SyntaxHighlighter className="code" language="jsx" style={prism}>
-            {`import React, { Component } from 'react';
+            <div className="content">
+                <h2>Radius, Marker, Popup and fitBounds</h2>
+                <div className="example">
+                    <AllInOne/>
+                    <SyntaxHighlighter className="code" language="jsx" style={prism}>
+                        {`import React, { Component } from 'react';
 import MapboxMap, { Marker, Circle, Helpers } from 'react-mapbox-wrapper';
 
 const SENTIER_COORDINATES = { lat: 48.868526, lng: 2.3434886 };
@@ -386,20 +386,20 @@ export default class AllInOne extends Component {
 }
 
 AllInOne.displayName = 'AllInOne';`}
-          </SyntaxHighlighter>
-        </div>
-      </div>
+                    </SyntaxHighlighter>
+                </div>
+            </div>
 
-      <footer className="footer">
-        Made with{' '}
-        <span role="img" aria-label="love">
+            <footer className="footer">
+                Made with{' '}
+                <span role="img" aria-label="love">
           ❤️
         </span>{' '}
-        by{' '}
-        <a href="https://www.meilleursagents.com" target="_blank" rel="noreferrer noopener">
-          MeilleursAgents
-        </a>
-      </footer>
-    </div>
-  );
+                by{' '}
+                <a href="https://www.meilleursagents.com" target="_blank" rel="noreferrer noopener">
+                    MeilleursAgents
+                </a>
+            </footer>
+        </div>
+    );
 }

@@ -205,7 +205,7 @@ export default class Marker extends Component {
      * React lifecycle.
      */
     render() {
-        const { children, popup, popupOffset, popupCloseButton } = this.props;
+        const { children, popup, popupAnchor, popupOffset, popupCloseButton } = this.props;
 
         let marker;
         let wrapperProps;
@@ -238,6 +238,7 @@ export default class Marker extends Component {
                         onMouseOut={this.onMarkerOut}
                         onBlur={this.onMarkerOut}
                         closeButton={popupCloseButton}
+                        anchor={popupAnchor}
                         offset={popupOffset}
                     >
                         {popup}
@@ -262,6 +263,7 @@ Marker.propTypes = {
     onMouseOver: PropTypes.func,
     popup: PropTypes.oneOfType([PropTypes.node, PropTypes.arrayOf(PropTypes.node)]),
     popupCloseButton: PropTypes.bool,
+    popupAnchor: PropTypes.string,
     popupOffset: PropTypes.number,
     popupOnOver: PropTypes.bool,
 };
@@ -275,6 +277,7 @@ Marker.defaultProps = {
     onMouseOver: undefined,
     popup: undefined,
     popupCloseButton: false,
+    popupAnchor: undefined,
     popupOffset: undefined,
     popupOnOver: false,
 };
