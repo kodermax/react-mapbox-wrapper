@@ -64,14 +64,10 @@ export default class Marker extends Component {
             return;
         }
 
-        const { coordinates: currentCoord, popupAnchor } = this.props;
+        const { coordinates: currentCoord } = this.props;
         const nextCoord = nextProps.coordinates;
-        const nextPopupAnchor = nextProps.popupAnchor;
 
         if (currentCoord.lat !== nextCoord.lat || currentCoord.lng !== nextCoord.lng) {
-            this.marker.setLngLat(nextProps.coordinates);
-        }
-        if (popupAnchor !== nextPopupAnchor) {
             this.marker.setLngLat(nextProps.coordinates);
         }
     }
